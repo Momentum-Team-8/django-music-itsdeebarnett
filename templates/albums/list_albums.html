@@ -11,6 +11,10 @@
                 <p>{{album.artist}}</p>
                 <p>{{album.created_at}}</p>
             {% endif %} 
+        <a href="{% url 'edit_album' pk=album.pk %}">Edit</a>
+        <br>
+        <a href="{% url 'delete_album' pk=album.pk %}">Delete</a>
+        <br>
         </div>
     {% endfor %}
 </div>
