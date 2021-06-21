@@ -1,0 +1,17 @@
+{% extends "base.html" %} {% block content %} 
+
+<h1>Deethony Barntano's Album Drops</h1>
+
+<p><a href="{% url 'add_album' %}">Add Album</a></p>
+<div>
+    {% for album in albums %} 
+        <div class="card">
+            {% if album.title %} 
+                <p>{{album.title}}</p>
+                <p>{{album.artist}}</p>
+                <p>{{album.created_at}}</p>
+            {% endif %} 
+        </div>
+    {% endfor %}
+</div>
+    {% endblock %}
